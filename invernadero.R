@@ -5,7 +5,7 @@ library(tidyverse)
 library(serial)
 library(ggplot2)
 library(magrittr)#####Debemos instalar estos paquetes y cargarlos para 
-library(plotly)####permitir la concexión entre Arduino y R
+library(plotly)####permitir la concexi?n entre Arduino y R
 library(stringtr)
 
 entrada <- listPorts()    #la funcion listPorts nos permite conocer los puertos que estan siendo usados en EL MOMENTO
@@ -140,7 +140,7 @@ Humedad_Tempera <- function(){
 tutiempo <- readline(prompt = "cuantos segundos quieres dejarlo? (error de +2 mediciones) : ") 
 tutiempo <- as.numeric(tutiempo)
 tiempoaco <- (tutiempo +2) #le preguntamos a la persona el tiempo que quiere dejar correr el sensor
-#este caso sons egundos pero pueden ser días u horas
+#este caso sons egundos pero pueden ser d?as u horas
 
 fecha <- Sys.time()
 print(fecha) #imprime la hora en que inicia
@@ -244,7 +244,7 @@ luz_no_na <- na.omit(luz)
 matrixluz <- as.matrix(luz_no_na)
 
 matrixluz
-fotoresistor <- matrix(matrixluz)   #realizamos los mismos tratamiento de la información cruda para el sensor de luz
+fotoresistor <- matrix(matrixluz)   #realizamos los mismos tratamiento de la informaci?n cruda para el sensor de luz
 fotoresistor
 ####
 
@@ -287,7 +287,7 @@ ArduSenL <- function(){
   
  
   
-}#y lo agregamos a una funcion, para solmante correr y pueda transformarnos la información más procesada
+}#y lo agregamos a una funcion, para solmante correr y pueda transformarnos la informaci?n m?s procesada
 
 ##########PRUEBA##################
 
@@ -311,7 +311,7 @@ luz_fotoresistor<- function(){
   print(fecha)
   
   medida <- ArduSenL()
-  print("hacer caso omiso a estas mediciones") #realizamos función similar a la de humedad y temperatura, dond enos pregunte el tiempo
+  print("hacer caso omiso a estas mediciones") #realizamos funci?n similar a la de humedad y temperatura, dond enos pregunte el tiempo
   #y respecto al tiempo nos diga los valores que midio
   
   Sys.sleep(tiempoaco)
@@ -364,22 +364,22 @@ horas
 
 
 revisiones <- function() { #se uso la funcion de function
-  contrasena <- readline (prompt = "Buen dia, por favor introduce la contraseña: ") #la contraseña es un objeto que contiene un readline que interactua con el usuario
+  contrasena <- readline (prompt = "Buen dia, por favor introduce la contrase?a: ") #la contrase?a es un objeto que contiene un readline que interactua con el usuario
 if(contrasena == "proyecto") { #si el objeto contrasena es igual a proyecto entonces se va a ejecutar lo siguiente
-    for ( i in 1:length(horas) ) { #la variable i va a cambiar segun el tamaño del horas
+    for ( i in 1:length(horas) ) { #la variable i va a cambiar segun el tama?o del horas
   if (humedad[i] < 20) { #si la humedad correspondiente a cada objeto de las variables "i" es menor a 20 entonces imprime el siguiente mensaje
     print (paste ("PRECAUCION; a los", horas [i], "horas. la humedad fue MUY baja: ", humedad [i], "% de humedad.")) }
-      #así se fue con todas variales que se toman definimos un rango en el cual queremos que nos avise si las condiciones son anormales
+      #as? se fue con todas variales que se toman definimos un rango en el cual queremos que nos avise si las condiciones son anormales
   if (humedad [i] > 30)
     print (paste ("PRECAUCION; a las", horas[i], "horas, la humedad fue MUY ALTA: ", humedad[i], "% de humedad.")) }
   if (temperaturaC[i] < 20) {
-  print (paste ("PRECAUCION; a las ", horas[i], "horas, la temperatura BAJÓ a ", temperaturaC [i], "°C.")) }
+  print (paste ("PRECAUCION; a las ", horas[i], "horas, la temperatura BAJ? a ", temperaturaC [i], "?C.")) }
   if (temperaturaC[i] > 30) {
-    print (paste ("PRECAUCION; a las ", horas[i], "horas, la temperatura fue MUY ALTA: ", temperaturaC[i], "°C.")) }
+    print (paste ("PRECAUCION; a las ", horas[i], "horas, la temperatura fue MUY ALTA: ", temperaturaC[i], "?C.")) }
   if (temperaturaF[i] < 68) {
-    print (paste ("PRECAUCION; a las: ", horas[i], "horas, la temperatura fue muy baja: ", temperaturaF[i], "°F.")) }
+    print (paste ("PRECAUCION; a las: ", horas[i], "horas, la temperatura fue muy baja: ", temperaturaF[i], "?F.")) }
   if (temperaturaF[i] > 86 ) {
-    print (paste ("PRECAUCION; a las ", horas[i], "horas, la temperatura fue MUY ALTA: ", temperaturaF[i], "°F.")) }
+    print (paste ("PRECAUCION; a las ", horas[i], "horas, la temperatura fue MUY ALTA: ", temperaturaF[i], "?F.")) }
     }
 }
 
@@ -388,5 +388,5 @@ revisiones()
 
 
 ##
-
-
+################
+#Hoy 30 de abril del 2025
